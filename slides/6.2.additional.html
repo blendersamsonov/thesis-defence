@@ -1,0 +1,129 @@
+<section data-visibility="uncounted">
+	<h3>КЭД каскад в плоской волне. Модель</h3>
+	Кинетические уравнения:
+	<div class="columns" style="align-items:center">
+		<div style="padding:0 10px 0 20px">
+			\[\begin{align}
+			\frac{\partial f_{e^\pm}}{\partial t} +  \mathbf{v}_{e^\pm} \nabla f_{e^\pm} \pm \left( \mathbf{E} + [\mathbf{v}_{e^\pm} \times \mathbf{B}] \right) \frac{\partial f_{e^\pm}}{\partial \mathbf{p}} = &  \\ \nonumber
+			\begin{aligned}
+				= &\int f_\gamma(\mathbf{p'}) w_{pair}(\mathbf{p', p}) d\mathbf{p'} + \\ \nonumber
+				+ &\int f_{e^\pm}(\mathbf{p'}) w_{rad}(\mathbf{p', p}) d\mathbf{p'} - \\ \nonumber 
+				- &\int f_{e^\pm}(\mathbf{p}) w_{rad}(\mathbf{p, p'}) d\mathbf{p'}  ,
+			\end{aligned} & 
+			\end{align}	\]
+			\[\begin{align}
+			\frac{\partial f_\gamma}{\partial t} + \mathbf{v}_\gamma\nabla f_\gamma = &\int  f_{e^\pm}(\mathbf{p'}) w_{rad}(\mathbf{p', p'-p}) d\mathbf{p'} - \\ \nonumber
+			+ &\int f_\gamma(\mathbf{p}) w_{pair}(\mathbf{p, p'}) d\mathbf{p'} ,
+			\end{align}\]
+		</div>
+		<div style="padding:0 20px 0 10px">
+			\[\begin{align}
+			\nabla\times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t}, \\
+			\nabla\times \mathbf{B} &= \frac{\partial \mathbf{E}}{\partial t} + \int f_{e^+} \mathbf{v}_{e^+} d\mathbf{p} - \int f_{e^-} \mathbf{v}_{e^-} d\mathbf{p} ,
+			\end{align}\]
+		</div>
+	</div>
+</section>
+
+<section data-visibility="uncounted">
+	<h3>КЭД каскад в плоской волне. Модель</h3>
+	Упрощения:
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <p style="justify-self:right; padding-right:10rem">
+            1D: $\mathbf{r}\rightarrow x$ 
+        </p>
+        <p style="justify-self:left; padding-left:1rem">
+            2V: $\mathbf{p}\rightarrow\left( p=|\mathbf{p}|, \theta=\cos^{-1}\left( \frac{p_x}{p} \right) \right)$
+        </p>
+    </div>
+    <hr style="height:0.1rem;background-color:black; width:80%">
+    <div>
+        Моноэнергетические функции распределения:
+        $$f\propto\frac{\delta(p-\bar{p})}{p^2}$$
+    </div>
+    <hr style="height:0.1rem;background-color:black; width:80%">
+    <div>
+        Гидродинамика:
+        <div class="r-stack">
+            <div>
+                <svg width="20rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                        refX="0" refY="3.5" orient="auto">
+                          <polygon points="0 0, 10 3.5, 0 7" />
+                        </marker>
+                      </defs>
+                      <line x1="15%" y1="50%" x2="45%" y2="75%" stroke="#000" 
+                      stroke-width="3" marker-end="url(#arrowhead)" /> 
+                      <line x1="15%" y1="50%" x2="50%" y2="50%" stroke="#000" 
+                      stroke-width="3" marker-end="url(#arrowhead)" />
+                      <line x1="15%" y1="50%" x2="45%" y2="25%" stroke="#000" 
+                      stroke-width="3" marker-end="url(#arrowhead)" /> 
+                </svg>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: center;">
+                <div style="padding:0 5rem 0 5rem">
+                    $$\int A\cdot(1,2,3)d\mathbf{p}$$
+                </div>
+                <div style="padding:0 5rem 0 3rem">
+                    <p style="height:3rem">Уравнение непрерывности</p>
+                    <p style="height:3rem">Уравнение Эйлера</p>
+                    <p style="height:3rem">Уравнение переноса энергии</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1.7fr; align-items: center;">
+            <div style="justify-self:right; padding: 0 20px 0 0">
+                $$n(x,t)=\int f(\mathbf{p})d\mathbf{p}$$
+            </div>
+            <div style="justify-self:left; padding: 0 0 0 20px"> — Квазинейтральность плазмы: $n_{e^+}=n_{e^-}=n_p$</div>
+        </div>
+    </div>
+</section>
+
+<section data-visibility="uncounted">
+	<h3>КЭД каскад в плоской волне. Модель</h3>
+    $$\frac{\partial }{\partial t}n_p  +\frac{\partial}{\partial x}\left( v_x n_p \right) = S[n,pp]$$
+
+    $$\frac{\partial}{\partial t}\left( \varepsilon_p n_p \right)  + \frac{\partial}{\partial x}\left( v_p \varepsilon_p n_p \right)  = S[\gamma,pp] + (S[\gamma,acc] - S[\gamma, rad_d])\psi_{vac} -S[\gamma, rad_c]\psi_{pl}$$
+	
+    $$\frac{\partial }{\partial t}n_\gamma  +\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)=-S[n,pp]+2S[n,rad_c]\psi_{pl}$$
+	
+    $$\frac{\partial}{\partial t}\left( \overline{v_{\gamma\parallel}} n_\gamma \right) + \frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}^2} n_\gamma \right) = -S[v,pp]+2S[v,rad_c]\psi_{pl}$$
+	
+    $$\frac{\partial}{\partial t}\left( \varepsilon_\gamma n_\gamma \right) +\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} \varepsilon_\gamma n_\gamma \right) =-S[\gamma,pp]+2S[\gamma,rad_c]\psi_{pl}$$
+	
+    $$\frac{\partial }{\partial t}\left( \frac{E^2 + E^2/v_x^2}{2} \right) +\frac{\partial}{\partial x} \left( \frac{E^2}{v_x} \right) =  -2S[\gamma,acc]\psi_{vac}\equiv\mathbf{jE}$$
+</section>
+
+<section data-visibility="uncounted">
+	<h3>КЭД каскад в плоской волне. Аналогия с газовым пробоем</h3>
+	<div style="display: grid; grid-template-columns: 1fr 1fr; font-size:1.2rem">
+		<div>
+			$$\frac{\partial }{\partial t}n_p  +\frac{\partial}{\partial x}\left( v_x n_p \right) = \overline{W_{pair}} n_\gamma$$
+			
+			$$\frac{\partial }{\partial t}n_\gamma  +\frac{\partial}{\partial x}\left( \overline{v_{\gamma\parallel}} n_\gamma \right)=-\overline{W_{pair}} n_\gamma + 2\overline{W_{rad}}\psi_{pl} n_p$$
+			
+			
+			$$\frac{\partial }{\partial t}\left( \frac{E^2 + E^2/v_x^2}{2} \right) +\frac{\partial}{\partial x} \left( \frac{E^2}{v_x} \right) =  -\varepsilon_\gamma \mu \overline{G_{rad}}n_\gamma$$
+			<img data-src="../media/plane-wave-cascade/dicharge_like.png" width="80%">
+			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">A. S. Samsonov, I. Yu. Kostyukov, E. N. Nerush // Matter and Radiation at Extremes. –– 2021. –– Т. 6, № 3. –– С. 034401.</p>
+		</div>
+		<div>
+			$$\frac{\partial n}{\partial t}=\frac{\partial^2 n}{\partial x^2}-\alpha n^2 + \mu\left( {E}^\beta - 1 \right) n$$
+			$$\frac{\partial E^2}{\partial t}+\frac{\partial E^2}{\partial x}=-2\varepsilon E^2$$
+			$$\varepsilon = 1 - n - i\delta n$$
+			<img data-src="../media/plane-wave-cascade/gas-discharge.jpg" width="70%">
+			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">В. Е. Семёнов // Физика плазмы. –– 1982. –– Т. 8, № 3. –– С. 613––618</p>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+
+<section data-visibility="uncounted">
+	<h3>КЭД каскад в плоской волне. Модель </h3>
+	<video controls data-src="../media/plane-wave-cascade/PIC.webm" style="height:38rem"></video>
+	<p style="text-align:left; font-size:1.2rem; padding: 0 2rem">A. Samsonov, I. Yu. Kostyukov, E. Nerush // Matter and Radiation at Extremes. –– 2021. –– Т. 6, № 3. –– С. 034401.</p>
+</section>

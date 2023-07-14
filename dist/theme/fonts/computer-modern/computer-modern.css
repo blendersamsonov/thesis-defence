@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Computer Modern Serif";
+    src: url('./cmunrm.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: "Computer Modern Serif";
+    src: url('./cmunbx.ttf') format('truetype');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern Serif";
+    src: url('./cmunci.ttf') format('truetype');
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Computer Modern Serif";
+    src: url('./cmunbi.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "Computer Modern Sans Serif";
+    src: url('./cmunss.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: "Computer Modern Sans Serif";
+    src: url('./cmunsx.ttf') format('truetype');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern Sans Serif";
+    src: url('./cmunsi.ttf') format('truetype');
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Computer Modern Sans Serif";
+    src: url('./cmunso.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "Computer Modern Sans Serif Demi Condensed";
+    src: url('./cmunssdc.ttf');
+  }

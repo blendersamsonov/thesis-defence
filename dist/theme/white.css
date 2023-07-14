@@ -3,39 +3,53 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(./fonts/source-sans-pro/source-sans-pro.css);
+/* /* @import url(./fonts/source-sans-pro/source-sans-pro.css); */
+/*@import url(./fonts/computer-modern/computer-modern.css); */
+@import url(./fonts/computer-modern/computer-modern.css);
+@import url(./fonts/STIX2fonts/STIX.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff;
 }
+
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
   --r-background-color: #fff;
-  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
-  --r-main-font-size: 42px;
+  /* --r-main-font: Latin Modern, Palatino Linotype, Book Antiqua, Palatino, FreeSerif, serif; */
+  --r-main-font: "Computer Modern Serif", serif;
+  /* --r-main-font: "STIX Serif", serif; */
+  --r-main-font-size: 1.5rem;
   --r-main-color: #222;
-  --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-block-margin: 1%;
+  --r-heading-margin: 1%;
+  /* --r-heading-font: "STIX Serif", serif; */
+  --r-heading-font: "Computer Modern Sans Serif", sans-serif;
   --r-heading-color: #222;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: 600;
+  --r-heading-font-weight: bold;
   --r-heading1-text-shadow: none;
-  --r-heading1-size: 2.5em;
-  --r-heading2-size: 1.6em;
-  --r-heading3-size: 1.3em;
-  --r-heading4-size: 1em;
+  --r-heading1-size: 2.6rem;
+  --r-heading2-size: 2.2rem;
+  --r-heading3-size: 1.8rem;
+  --r-heading4-size: 1.8rem;
   --r-code-font: monospace;
   --r-link-color: #2a76dd;
   --r-link-color-dark: #1a53a1;
   --r-link-color-hover: #6ca0e8;
   --r-selection-background-color: #98bdef;
   --r-selection-color: #fff;
+  --r-emphasis-color: #75c0fd;
+  --r-shadow-color: #5a6a86;
+  --r-footer-visibility: visible;
+  --r-el-background: rgba(255, 255, 255, 0);
+  --r-el-border: none;
+  /* --r-el-background: #d2fdff;
+  --r-el-border: 2px solid black; */
 }
 
 .reveal-viewport {
@@ -81,19 +95,47 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: var(--r-heading-color);
   font-family: var(--r-heading-font);
   font-weight: var(--r-heading-font-weight);
+  font-style: normal;
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
   text-transform: var(--r-heading-text-transform);
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
+  background-color: var(--r-el-background);
+	border: var(--r-el-border);
+}
+
+.reveal h1,
+.reveal h2 {
+  /* border-radius: 25px; */
+  /* background-color: var(--r-emphasis-color);
+	border: 2px solid black;
+  box-shadow: 7px 7px 10px var(--r-shadow-color); */
+  justify-self: center;
+  display: inline-block;
+}
+
+.reveal h3 {
+  padding-top: 10px;
+  margin: 0 0 20px 0;
+  /* background-color: var(--r-emphasis-color); */
+	/* border-bottom: 2px solid black; */
+  justify-self: center;
 }
 
 .reveal h1 {
+  font-family: "Computer Modern Sans Serif Demi Condensed";
   font-size: var(--r-heading1-size);
+  padding: 20px 20px 20px 20px;
 }
 
 .reveal h2 {
+  font-style: normal;
   font-size: var(--r-heading2-size);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  justify-self: center;
+  /* border: 2px solid black; */
+  margin: 0 0 0 0;
 }
 
 .reveal h3 {
@@ -111,9 +153,34 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 /*********************************************
  * OTHER
  *********************************************/
+.reveal .footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px 20px 5px 20px;
+  font-size: 0.75em;
+  background-color: var(--r-emphasis-color);
+  /* background-color: attr(data-footer-visibility); */
+  visibility: visible;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.notes .reveal .footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px 20px 5px 20px;
+  font-size: 0.75em;
+  background-color: var(--r-emphasis-color);
+  visibility: hidden;
+}
+
 .reveal p {
   margin: var(--r-block-margin) 0;
   line-height: 1.3;
+  /* background-color: var(--r-el-background);
+	border: var(--r-el-border); */
 }
 
 /* Remove trailing margins after titles */
@@ -149,6 +216,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em;
+  background-color: var(--r-el-background);
+	border: var(--r-el-border);
 }
 
 .reveal ol {

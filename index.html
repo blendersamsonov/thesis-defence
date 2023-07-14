@@ -8,7 +8,11 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/custom.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		
+		<link rel="stylesheet" href="plugin/pointer/pointer.css" />
+
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +20,15 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-external="slides/1.1.intro.html"></section>
+				<section data-external="slides/2.1.chapter1.html"></section>
+				<section data-external="slides/3.1.chapter2.html"></section>
+				<section data-external="slides/4.1.chapter3.html"></section>
+				<section data-external="slides/5.1.conclusion.html"></section>
+				<section data-external="slides/6.0.reviewer-response.html"></section>
+				<section data-external="slides/6.1.additional.html"></section>
+				<section data-external="slides/6.2.additional.html"></section>
+				<section data-external="slides/6.3.additional.html"></section>
 			</div>
 		</div>
 
@@ -25,6 +36,9 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/pointer/pointer.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +47,49 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3, RevealPointer, RevealZoom ],
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// center: false,
+
+				width: 1280,
+    			height: 720,
+
+				margin: 0.04,
+
+				viewDistance: 3,
+
+				// // width: 1600,
+    			// // height:1000,
+
+				controls: true,
+				controlsTutorial: false,
+				// controlsLayout: 'edges',
+
+				transitionSpeed: 'fast',
+
+				slideNumber: 'h.v',
+
+				disableLayout: false,
+
+				center: false,
+
+				// // pdfSeparateFragments: false,
+				// pdfMaxPagesPerSlide: 1,
+
+				pointer: {
+					key: "q", // key to enable pointer, default "q", not case-sensitive
+					color: "red", // color of a cursor, default "red" any valid CSS color
+					pointerSize: 8, // pointer size in px, default 12
+					alwaysVisible: false, // should pointer mode be always visible? default "false"
+				},
+
+				dependencies: [
+				{ src: 'plugin/mouse-pointer/mouse-pointer.js', async: true }, 
+				{ src: 'plugin/external/external.js', condition: function() 
+					{ return !!document.querySelector( '[data-external],[data-external-replace]' ); } },
+				]
 			});
 		</script>
 	</body>
