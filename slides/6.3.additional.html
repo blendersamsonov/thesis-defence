@@ -1,0 +1,199 @@
+<section data-visibility="uncounted">
+    <h3>Задача о столкновении пучков ультрарелятивистских частиц</h3>
+    <div style="display: grid; grid-template-columns: 1fr 0.5fr 1fr; padding: 0 2rem 0 2rem; grid-auto-rows: 20rem;">
+        <div>
+            <p>Упрощения:</p>
+            <ul>
+                <li>Однородное распределение заряда:
+                    \[\begin{equation}
+                    n(\mathbf{r})=\begin{cases}
+                    n_e,\ |x|\leq x_b\land r\leq r_b,\\
+                    0,\ |x|> x_b\lor r> r_b,
+                    \end{cases}
+                    \end{equation}
+                    \]
+                </li>
+                <li>
+                    Ультрарелятивизм ($\gamma\gg 1$)
+                </li>
+            </ul>
+        </div>
+        <div style="padding-top:3rem; padding-left:3rem">
+            <svg width="20rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="15%" y1="30%" x2="45%" y2="30%" stroke="#000" stroke-width="3"/> 
+                  <line x1="45%" y1="30%" x2="45%" y2="5%" stroke="#000" stroke-width="3"/> 
+                  <line x1="45%" y1="5%" x2="75%" y2="50%" stroke="#000" stroke-width="3"/> 
+                  <line x1="75%" y1="50%" x2="45%" y2="95%" stroke="#000" stroke-width="3"/> 
+                  <line x1="45%" y1="95%" x2="45%" y2="75%" stroke="#000" stroke-width="3"/> 
+                  <line x1="45%" y1="75%" x2="15%" y2="75%" stroke="#000" stroke-width="3"/> 
+            </svg>
+        </div>
+        <div>
+            Электрическое поле вычисляется по т. Гаусса:
+            \[\begin{equation}
+            E_r=2\pi e n_e\begin{cases}
+            r,\ ,r\leq r_b,\\
+            r_b^2/r,\ r> r_b
+            \end{cases}
+            \end{equation}
+            \]
+            $$B_\theta = vE_r\approx E_r$$
+        </div>
+    </div>
+    <p>Сила со стороны собственных полей:</p>
+    $$F_{int} = E_r - B_\theta \propto E_r/\gamma^2 \ll E_r$$
+    <p>Сила со стороны полей встречного пучка:</p>
+    $$F_{ext} = E_r + B_\theta \approx 2 E_r$$
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Задача о столкновении пучков ультрарелятивистских частиц</h3>
+    <p>Движение частицы в поле встречного пучка:</p>
+    $$\frac{\mathrm{d}p}{\mathrm{d}t} = -mc\omega_b^2 y$$
+    <p>Нормируя уравнения на $\omega_b$:</p>
+    $$\frac{\mathrm{d}y}{\mathrm{d}t} = -\frac{y}{\gamma}$$
+    <p>При $\gamma=\text{const}$, $y=y_0\cos\frac{t}{\sqrt{\gamma}}$ –– бетатронные колебания</p>
+    <p>Время "фокусировки": $t_p = \sqrt{2\gamma}$</p>
+    <p><u>Параметр разрушения:</u></p>
+    <div style="border:2px solid black; border-radius: 2rem; margin: 0 24rem 0 24rem">
+        $$D_0 = \left( \frac{t_{int}}{t_p} \right)^2 = \frac{1}{2\gamma} \left( \frac{\omega_b\sigma_x}{c} \right)^2$$
+    </div>
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Задача о столкновении пучков ультрарелятивистских частиц</h3>
+    <p>Учёт реакции излучения:</p>
+    $$\frac{\mathrm{d}y}{\mathrm{d}t} = -\frac{y}{\gamma}$$
+    $$\frac{\mathrm{d}\gamma}{\mathrm{d}t} = -F_{rr}(\chi)$$
+    <p>Характерные масштабы задачи:</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 2rem 0 2rem;">
+        <p>$T_D\sim\sqrt{2\gamma_0}$ –– период бататронных колебаний</p>
+        <p>$T_{BS} \sim \frac{\gamma_0}{F_{rr}(\chi_0)}$ –– временной масштаб потерь энергии</p>
+    </div>
+    $$\varkappa = \frac{T_D}{T_{BS}} = \sqrt{\frac{2}{\gamma_0}} F_{rr}(\chi_0)$$
+    <p>$\varkappa \gg 1$ –– режим преобладания пучкового излучения</p>
+    <p>$\varkappa \ll 1$ –– режим "медленных" радиационных потерь</p>
+    <!-- $$\chi = \frac{\gamma y}{a_\mathrm{S}},\ a_\mathrm{S} = \frac{mc^2}{\hbar\omega_b}$$
+    \[\begin{equation}
+    F_{rr} = \alpha a_\mathrm{S} \begin{cases}
+    0.67\chi^2,\ \chi\ll 1, \\
+    0.37 \chi^{2/3},\ \chi\gg 1
+    \end{cases}
+    \end{equation}
+    \] -->
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Увеличение параметра разрушения за счёт пучкового излучения</h3>
+    <img class="stretch" data-src="../media/beam-map.png" width="90%">
+    <video controls data-src="../media/beam-beam/tracks_mov_dense.mp4"></video>
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Изгибная неустойчивость</h3>
+    <video controls data-src="../media/beam-beam/density_mov.mp4"></video>
+</section>
+
+<style>
+    tr td:nth-child(n-1) {
+      text-align: center;
+      border-right: solid 2px black;
+      border-left: solid 2px black;
+      width: 14rem;
+    }
+</style>
+
+<section data-visibility="uncounted">
+    <h3>Проекты ускорителей нового поколения</h3>
+    <div style="height:38rem">
+        <table style="border:2px solid black">
+            <tr style="border:2px solid black">
+              <th>Проект</th>
+              <td style="font-weight:bold;">FACET-II</td>
+              <td style="font-weight:bold;">FACET-II NPQED$^1$</td>
+              <td style="font-weight:bold;">ILC</td>
+              <td style="font-weight:bold;">CLIC</td>
+            </tr>
+            <tr>
+              <th>Энергия, ГэВ</th>
+              <td>10</td>
+              <td>125</td>
+              <td>250</td>
+              <td>1500</td>
+            </tr>
+            <tr>
+              <th>Заряд, нКл</th>
+              <td>0.5-3</td>
+              <td>3</td>
+              <td>3.2</td>
+              <td>0.6</td>
+            </tr>
+            <tr>
+              <th>Диаметр пучка, мкм</th>
+              <td>5-200</td>
+              <td>0.01</td>
+              <td>0.5/0.006</td>
+              <td>0.05/0.001</td>
+            </tr>
+            <tr>
+              <th>Длина пучка</th>
+              <td>1-100</td>
+              <td>0.01-0.1</td>
+              <td>300</td>
+              <td>44</td>
+            </tr>
+            <tr>
+                <th>$\chi_0$</th>
+                <td>-</td>
+                <td>1000-1600</td>
+                <td>0.06-0.15</td>
+                <td>5-10</td>
+              </tr>
+            <tr>
+                <th>$D_0$</th>
+                <td>-</td>
+                <td>0.1</td>
+                <td>0.3/20</td>
+                <td>0.15/7</td>
+              </tr>
+              <tr>
+                <th>$D/D_0$</th>
+                <td>-</td>
+                <td style="font-weight:bold;">$\sim$60%</td>
+                <td style="font-weight:bold;">$<$5%</td>
+                <td style="font-weight:bold;">35%/5%</td>
+              </tr>
+            </table>
+            <table>
+                <tr>
+                  <th style="width:16rem"> </th>
+                  <th colspan="2" style="height:8rem; width:30rem"><img data-src="../media/beam-beam/4_FACET-II_HORIZONTAL_FULLNAME.png" width="80%"></th>
+                  <th style="height: 8rem;"><img data-src="../media/beam-beam/ilc.png" width="80%"></th>
+                  <th style="height: 8rem;"><img data-src="../media/beam-beam/CLIC-Logo-Color-72.png" width="80%"></th>
+                </tr>
+            </table>
+    </div>
+
+      <p style="text-align:left; font-size:1.2rem; padding: 0 2rem">$^1$V. Yakimenko [и др.] // Physical Review Letters. –– 2019. –– Т. 122, № 19. –– С. 190404.</p>
+      
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Увеличение параметра разрушения за счёт пучкового излучения</h3>
+    <img class="stretch" data-src="../media/beam-beam/Q_disruption.png" width="90%">
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Увеличение параметра разрушения за счёт пучкового излучения</h3>
+    <img class="stretch" data-src="../media/beam-beam/Q_disruption2.png" width="90%">
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Генерация гамма-излучения при взаимодействии пучка электронов с плазменной мишенью</h3>
+    <img style="margin: 0" class="stretch" data-src="../media/film-bubble.png" width="120%">
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Численная черенковская неустойчивость</h3>
+    <img style="margin: 0" class="stretch" data-src="../media/beam-NCI_fdtd.png" width="120%">
+</section>

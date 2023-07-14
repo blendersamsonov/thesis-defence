@@ -627,8 +627,14 @@ $controlsArrowAngleActive: 36deg;
 	position: relative;
 	width: 100%;
 	height: 100%;
+	max-width: 100vw;
+	// max-height: 56.25vw;
+	// width: 100vh;
+	// height: 177.77vh;
+	// margin: 0 auto;
 	overflow: hidden;
 	touch-action: pinch-zoom;
+	// padding-bottom: 56.25%;
 }
 
 // Swiping on an embedded deck should not block page scrolling
@@ -646,6 +652,9 @@ $controlsArrowAngleActive: 36deg;
 	left: 0;
 	margin: auto;
 	pointer-events: none;
+
+	// border: 2px solid black;
+	box-sizing: border-box;
 
 	overflow: visible;
 	z-index: 1;

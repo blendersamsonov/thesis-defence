@@ -1,0 +1,104 @@
+<section>
+    <h3>Ответы на змечания рецензента</h3>
+    <div style="text-align:justify">
+        "К недостаткам можно отнести изложение новой численной схемы в главе 3.4. В ней практически отсутствует какое-либо исследование приведенной схемы на предмет её устойчивости и точности получаемых результатов на стандартных электромагнитных задачах с заданными регулярными токами."
+    </div>
+    
+    <!-- <div>
+        FDTD:
+        $$\hat{\delta}_t B_x = \hat{\delta}_z E_y - \hat{\delta}_y E_z$$
+        Новая схема:
+        \[\begin{align}
+        \hat{\delta}_t B_x =(a_{0,z} + a_{1,z} \hat{\mu}_z)\hat{\delta}_z E_y - (a_{0,y} + a_{1,y} \hat{\mu}_y)\hat{\delta}_y E_z
+        \end{align}\]
+    </div> -->
+    <p><u>Анализ устойчивости:</u></p>
+    <p>Ищется решение в виде плоских волн $\mathbf{E}=\mathbf{E}_0 \exp{(-i\omega t+i\mathbf{kr})}$ в вакууме ($\mathbf{j}=0$)</p>
+    $$\hat{A}F_0=0 \qquad F_0=(E_{0,x},E_{0,y},E_{0,z},B_{0,x},B_{0,y},B_{0,z})^{T}$$
+    <p>Из условия $\text{det}\hat{A}=0$ находится дисперсионное соотношение $\omega(\mathbf{k})$. Схема считается устойчивой при $\mathrm{Im}(\omega) =0$.</p>
+    $$\omega = \pm \frac{2}{\Delta t} \arcsin{\left(\Delta t \sqrt{{A_x}^2+{A_y}^2+{A_z}^2} \right)},\ A_\alpha = \frac{1}{\Delta\alpha}\sin{\frac{k_\alpha\Delta \alpha}{2}} \left( a_{0,\alpha}+a_{1,\alpha}\cos{(k_\alpha\Delta\alpha)} \right)$$
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div>
+            <p>Новая схема $a_{1,\alpha} = \frac{1}{2} \left( 1 - \frac{\Delta \alpha}{\Delta t} \sin{ \left[ \frac{\pi}{2} \frac{\Delta t}{\Delta \alpha} \right]} \right),\ a_{0,\alpha} = 1 -a_{1,\alpha}$:</p>
+            $$\sin^2 \left( \frac{\pi}{2} \frac{\Delta t}{\Delta x} \right) + \sin^2 \left( \frac{\pi}{2} \frac{\Delta t}{\Delta y} \right) + \sin^2 \left( \frac{\pi}{2} \frac{\Delta t}{\Delta z} \right) < 1$$
+        </div>
+        <div>
+            <p>FDTD<br>$a_1=0, a_0=1$:</p>
+            $$\left(\frac{\Delta t}{\Delta x}\right)^2 + \left(\frac{\Delta t}{\Delta y}\right)^2 + \left(\frac{\Delta t}{\Delta z}\right)^2 < 1$$
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h3>Ответы на змечания рецензента</h3>
+    <div style="text-align:justify">
+        "К недостаткам можно отнести изложение новой численной схемы в главе 3.4.
+            В ней практически отсутствует какое-либо исследование приведенной схемы на предмет её устойчивости и
+            точности получаемых результатов на стандартных электромагнитных задачах с заданными регулярными токами."
+    </div>
+    
+    <p><u>Результаты моделирования распространения пучка электронов в вакууме:</u></p>
+    <img style="margin: 0" class="stretch" data-src="../media/beam-NCI-compare.png" width="120%">
+
+</section>
+
+<section>
+    <h3>Ответы на змечания рецензента</h3>
+    <div style="text-align:justify">
+        "К недостаткам можно отнести изложение новой численной схемы в главе 3.4. В ней практически отсутствует какое-либо исследование приведенной схемы на предмет её устойчивости и точности получаемых результатов на стандартных электромагнитных задачах с заданными регулярными токами."
+    </div>
+    
+    <p><u>Результаты моделирования распространения лазерного импульса в вакууме:</u></p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div>
+            <img style="margin: 0" class="stretch" data-src="../media/maxwell-laser.png" width="70%">
+        </div>
+        <div>
+            <img style="margin: 0" class="stretch" data-src="../media/maxwell-laser-error.png" width="70%">
+        </div>
+    </div>
+    <p>
+        $$
+        \varepsilon = \sqrt{\frac{\iiint \left( E_y - E_{y, NDFX} \right)^2 \mathrm{d}x \mathrm{d}y \mathrm{d}z}{\iiint E_{y, NDFX}^2 \mathrm{d}x \mathrm{d}y \mathrm{d}z}} \qquad \Delta x=0.015\lambda
+        $$
+    </p>
+
+</section>
+
+<section>
+    <h3>Ответы на змечания рецензента</h3>
+    <div style="text-align:justify">
+        "К недостаткам можно отнести изложение новой численной схемы в главе 3.4. В ней практически отсутствует какое-либо исследование приведенной схемы на предмет её устойчивости и точности получаемых результатов на стандартных электромагнитных задачах с заданными регулярными токами."
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top:0.5rem">
+        <div>
+            FDTD:
+            \[\begin{align}
+            \hat{\delta}_t B_x &= \hat{\delta}_z E_y - \hat{\delta}_y E_z, \\
+            \hat{\delta}_t B_y &= \hat{\delta}_x E_z - \hat{\delta}_z E_x, \\
+            \hat{\delta}_t B_z &= \hat{\delta}_y E_x - \hat{\delta}_x E_y, \\
+            \hat{\delta}_t E_x &= \hat{\delta}_y B_z - \hat{\delta}_z B_y + j_x, \\
+            \hat{\delta}_t E_y &= \hat{\delta}_x B_x - \hat{\delta}_x B_z + j_y, \\
+            \hat{\delta}_t E_z &= \hat{\delta}_z B_y - \hat{\delta}_y B_x + j_z,
+            \end{align}
+            \]
+        </div>
+        <div>
+            Новая схема:
+            \[\begin{align}
+            \hat{\delta}_t B_x &= (a_{0,z}+a_{1,z}\hat{\mu}_z)\hat{\delta}_z E_y - (a_{0,y}+a_{1,y}\hat{\mu}_y)\hat{\delta}_y E_z, \\
+            \hat{\delta}_t B_y &= (a_{0,x}+a_{1,x}\hat{\mu}_x)\hat{\delta}_x E_z - (a_{0,z}+a_{1,z}\hat{\mu}_z)\hat{\delta}_z E_x, \\
+            \hat{\delta}_t B_z &= (a_{0,y}+a_{1,y}\hat{\mu}_y)\hat{\delta}_y E_x - (a_{0,x}+a_{1,x}\hat{\mu}_x)\hat{\delta}_x E_y, \\
+            \hat{\delta}_t E_x &= (a_{0,y}+a_{1,y}\hat{\mu}_y)\hat{\delta}_y B_z - (a_{0,z}+a_{1,z}\hat{\mu}_z)\hat{\delta}_z B_y + j_x, \\
+            \hat{\delta}_t E_y &= (a_{0,x}+a_{1,x}\hat{\mu}_x)\hat{\delta}_x B_x - (a_{0,x}+a_{1,x}\hat{\mu}_x)\hat{\delta}_x B_z + j_y, \\
+            \hat{\delta}_t E_z &= (a_{0,z}+a_{1,z}\hat{\mu}_z)\hat{\delta}_z B_y - (a_{0,y}+a_{1,y}\hat{\mu}_y)\hat{\delta}_y B_x + j_z,
+            \end{align}
+            \]
+            
+        </div>
+    </div>
+    $$\hat{\delta}_\alpha F^{j_\alpha+1/2}=\frac{F^{j_\alpha}-F^{j_\alpha+1}}{\Delta \alpha} \qquad  \hat{\mu}_\alpha F^{j_\alpha} = \frac{F^{j_\alpha+1}+F^{j_\alpha-1}}{2}$$
+    $$a_{0,\alpha}+a_{1,\alpha}=1$$
+</section>

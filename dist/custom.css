@@ -1,0 +1,20 @@
+.split {
+  display: flex;
+}
+
+.column {
+  flex: 1; /* Set a default flex value */
+}
+
+.column[data-width-ratio] {
+  flex: calc(var(--width-ratio) * 1);
+}
+
+.ref-bottom {
+  position: fixed;
+  bottom:0rem;
+  text-align:left;
+  align-self: bottom;
+  font-size:1.2rem;
+  margin: 0 0 0 0
+}

@@ -1,0 +1,120 @@
+<section data-visibility="uncounted">
+    <h3>Реакция излучения. Временные масштабы</h3>
+    <div style="font-size:1.5rem">
+        <p>$$a_0 = \frac{eE}{mc\omega}\gg 1$$</p>
+        <p>Длина формирования излучения$$\lambda_f = \lambda / a_0 \ll \lambda$$</p>
+        <p>Вероятность излучения в приближении локально-постоянного поля (LCFA)$$W_\mathrm{rad} \approx \alpha \frac{m c^2}{\gamma\hbar} \times
+            \begin{cases}
+                1.4 \chi, & \chi \ll 1, \\
+                0.7 \chi^{2/3}, & \chi \gg 1,
+            \end{cases}$$</p>
+        <p>"Длина свободного пробега"$$\lambda_W = c/W_\mathrm{rad} \approx \frac{\lambda}{\alpha a_0} \times
+            \begin{cases}
+                1, & \chi \ll 1, \\
+                \chi^{1/3}, & \chi \gg 1.
+            \end{cases}$$</p>
+        <p>Иерархия масштабов ($\chi \lesssim 10$)</p>
+        <p style="border: 2px solid black; margin: 0 34rem 0 34rem; border-radius: 1.5rem;">$$\lambda_f \ll \lambda_W \ll \lambda$$</p>
+    </div>
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Динамика заряженных частиц в режиме экстремальных радиационных потерь</h3>
+        <div style="height: 36rem">
+            <div>
+                Уравнения движения ультрарелятивистской заряженной частицы (электрона) в ЭМ поле с учётом реакции излучения
+            </div>
+            
+            $$\frac{\mathrm{d}\mathbf{v}}{\mathrm{d}t} = -\frac{\mathbf{E}+\mathbf{v} \times \mathbf{B} - \mathbf{v} (\mathbf{v} \mathbf{E})}{\gamma} \qquad\qquad \frac{\mathrm{d}\gamma}{\mathrm{d}t} = \mathbf{vE} - \mathbf{F}_\mathrm{rr}\left( |\mathbf{F}_\perp| \right)$$
+    
+            <div style="text-align: justify; padding: 0 5rem 0 5rem">
+                <p>В постоянных полях задача решается аналитически$^1$:</p>
+                <ul>
+                    <li>В системе отсчёта $\mathcal{K}'$, в которой $\mathbf{E}'\parallel\mathbf{B}'\parallel \mathbf{z}_0'$, электрон вращается в плоскости $x'y'$, и его скорость вдоль оси $z'$ приближается к 1 за время порядка $\gamma_0' mc/eE'$.</li>
+                    <li style="padding-top:0.5rem">В "лабораторной" системе отсчёта направление $\mathbf{v}_0$ электрического поля в $\mathcal{K}'$ определяется из уравнения
+                    $$\mathbf{E}+\mathbf{v}_0 \times \mathbf{B} - \mathbf{v}_0 (\mathbf{v}_0 \mathbf{E})=0$$</li>
+                </ul>
+                <div>Считая, что в режиме экстремальных радиационных потерь $\gamma \ll eE/mc\omega\equiv a_0$, на временах масштаба $\gamma mc/eE\ll \omega^{-1}$ ЭМ поле можно считать постоянным. Таким образом, электрон "успевает" сориентироваться по направлению $\mathbf{v}_0$ до того, как оно существенно изменится.</div>
+            </div>
+        </div>
+        <div class="ref-bottom">
+            $^1$H. Heintzmann, E. Schrüfer // Physics Letters A. –– 1973. –– Т. 43, № 3. –– С. 287––288.
+        </div>
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Общие свойства асимптотических траекторий</h3>
+    <div style="display: grid; grid-template-columns: 1fr 2fr; padding: 0 2rem 0 2rem; grid-auto-rows: 26rem;">
+        <div>
+            $$\mathbf{E} = \mathbf{f}(\mathbf{r}, t) - \mathbf{f}(\mathbf{r}, -t) $$
+            $$\mathbf{B} = \mathbf{g}(\mathbf{r}, t) + \mathbf{g}(\mathbf{r}, -t) $$
+            $$\mathbf{E}(t+T) = \mathbf{E}(t)$$
+            $$\mathbf{B}(t+T) = \mathbf{B}(t)$$
+            В таком случае
+            $$\langle\mathbf{v}_0\rangle_T = 0$$
+            $$\mathbf{r}(t+T) = \mathbf{r}(t+T)$$
+        </div>
+        <div>
+            <img class="stretch" data-src="../media/asym-onion.png" width="90%">
+        </div>
+    </div>
+    <div style="font-size: 1.4rem; height:12rem">
+        Пример: стоячая линейно-поляризованная волна
+        $$\mathbf{E}=\mathbf{y}_0a_0\cos(t)\cos(x)$$
+        $$\mathbf{B}=\mathbf{z}_0a_0\sin(t)\sin(x)$$
+    </div>
+    <div class="ref-bottom">
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Physical Review A. –– 2018. –– Т. 98, № 5. –– С. 053858.<br>
+        A. Gonoskov [и др.] // Physical Review Letters. –– 2014. –– Т. 113. –– С. 014801.
+    </div>
+
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Общие свойства асимптотических траекторий</h3>
+    <div style="height: 38rem;">
+        <img class="stretch" data-src="../media/te11-new.png" width="65%">
+        <div style="font-size: 1.3rem">
+            Пример: ТЕ11 мода прямоугольного волновода (модель лазерного пучка конечного размера). В системе отсчёта $\mathcal{K}'$, движущейся с групповой скоростью $v_g$:
+            \[
+            \begin{align}
+                E_y' = a_0 k_\perp \cos(k_y y) \sin(k_z z) \cos(k_\perp t'), \\
+                E_z' = -\frac{a_0 k_\perp k_y}{k_z} \sin(k_y y) \cos(k_z z) \cos(k_\perp t'), \\
+                B_x' = \frac{a_0 (k_z^2 + k_y^2)}{k_z} \cos(k_y y) \cos(k_z z) \sin(k_\perp t'), \\
+                E_x' = B_x' = B_y' = B_z' = 0,
+            \end{align}
+            \]
+        </div>
+    </div>
+    <div class="ref-bottom">
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Physical Review A. –– 2018. –– Т. 98, № 5. –– С. 053858.
+    </div>
+
+</section>
+
+<section data-visibility="uncounted">
+    <h3>Динамика электрона в модельном линейном ускорителе</h3>
+    <div style="display: grid; grid-template-columns: 1fr 2fr; padding: 0 2rem 0 2rem; grid-auto-rows: 22rem;">
+        <div style="padding-top:8rem">
+            $$\mathbf{E} = \mathbf{z}_0 E_\mathrm{acc} + \mathbf{y} E_\mathrm{foc}$$
+        </div>
+        <div>
+            <img class="stretch" data-src="../media/asym-accelerator.png" width="90%">
+        </div>
+    </div>
+    <div style="font-size: 1.4rem; height:9rem; padding-top:4rem">
+        \[
+        \begin{align}
+        \left\langle F_\mathrm{rr} \right\rangle = \frac{2}{3}E_\mathrm{acc}&&
+        \left\langle\frac{\mathrm{d}\gamma}{\mathrm{d}t}\right\rangle = \frac{E_\mathrm{acc}}{3}&&
+        \langle\chi\rangle = \mathrm{const}
+        \end{align}
+        \]
+    </div>
+    <div class="ref-bottom">
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Matter and Radiation at Extremes. –– 2022. –– Т. 8, № 1. –– С. 014402.<br>
+        I. Yu. Kostyukov, E. N. Nerush, A. G. Litvak // Physical Review Special Topics-Accelerators and Beams. –– 2012. –– Т. 15, № 11. –– С. 111001.<br>
+        A. A. Golovanov, E. N. Nerush, I. Yu. Kostyukov // New Journal of Physics. –– 2022. –– Т. 24, № 3. –– С. 033011.
+    </div>
+
+</section>
