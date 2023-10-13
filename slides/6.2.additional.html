@@ -1,6 +1,6 @@
 <section data-visibility="uncounted">
-	<h3>КЭД каскад в плоской волне. Модель</h3>
-	Кинетические уравнения:
+	<h3>QED cascade in a plane wave. Model</h3>
+	Kinetic equations
 	<div class="columns" style="align-items:center">
 		<div style="padding:0 10px 0 20px">
 			\[\begin{align}
@@ -26,8 +26,8 @@
 </section>
 
 <section data-visibility="uncounted">
-	<h3>КЭД каскад в плоской волне. Модель</h3>
-	Упрощения:
+	<h3>QED cascade in a plane wave. Model</h3>
+	Approximations
     <div style="display: grid; grid-template-columns: 1fr 1fr;">
         <p style="justify-self:right; padding-right:10rem">
             1D: $\mathbf{r}\rightarrow x$ 
@@ -38,12 +38,12 @@
     </div>
     <hr style="height:0.1rem;background-color:black; width:80%">
     <div>
-        Моноэнергетические функции распределения:
+        Locally monoenergetic distribution functions
         $$f\propto\frac{\delta(p-\bar{p})}{p^2}$$
     </div>
     <hr style="height:0.1rem;background-color:black; width:80%">
     <div>
-        Гидродинамика:
+        Hydrodynamics
         <div class="r-stack">
             <div>
                 <svg width="20rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
@@ -62,13 +62,13 @@
                 </svg>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: center;">
-                <div style="padding:0 5rem 0 5rem">
+                <div style="padding:0 8rem 0 5rem">
                     $$\int A\cdot(1,2,3)d\mathbf{p}$$
                 </div>
                 <div style="padding:0 5rem 0 3rem">
-                    <p style="height:3rem">Уравнение непрерывности</p>
-                    <p style="height:3rem">Уравнение Эйлера</p>
-                    <p style="height:3rem">Уравнение переноса энергии</p>
+                    <p style="height:3rem">Continuity equation</p>
+                    <p style="height:3rem">Euler equation</p>
+                    <p style="height:3rem">Energy transfer equation</p>
                 </div>
             </div>
         </div>
@@ -76,13 +76,13 @@
             <div style="justify-self:right; padding: 0 20px 0 0">
                 $$n(x,t)=\int f(\mathbf{p})d\mathbf{p}$$
             </div>
-            <div style="justify-self:left; padding: 0 0 0 20px"> — Квазинейтральность плазмы: $n_{e^+}=n_{e^-}=n_p$</div>
+            <div style="justify-self:left; padding: 0 0 0 20px"> — Plasma quasi-neutrality: $n_{e^+}=n_{e^-}=n_p$</div>
         </div>
     </div>
 </section>
 
 <section data-visibility="uncounted">
-	<h3>КЭД каскад в плоской волне. Модель</h3>
+	<h3>QED cascade in a plane wave. Model</h3>
     $$\frac{\partial }{\partial t}n_p  +\frac{\partial}{\partial x}\left( v_x n_p \right) = S[n,pp]$$
 
     $$\frac{\partial}{\partial t}\left( \varepsilon_p n_p \right)  + \frac{\partial}{\partial x}\left( v_p \varepsilon_p n_p \right)  = S[\gamma,pp] + (S[\gamma,acc] - S[\gamma, rad_d])\psi_{vac} -S[\gamma, rad_c]\psi_{pl}$$
@@ -97,7 +97,7 @@
 </section>
 
 <section data-visibility="uncounted">
-	<h3>КЭД каскад в плоской волне. Аналогия с газовым пробоем</h3>
+	<h3>QED cascade in a plane wave. Gas discharge analogy</h3>
 	<div style="display: grid; grid-template-columns: 1fr 1fr; font-size:1.2rem">
 		<div>
 			$$\frac{\partial }{\partial t}n_p  +\frac{\partial}{\partial x}\left( v_x n_p \right) = \overline{W_{pair}} n_\gamma$$
@@ -107,14 +107,14 @@
 			
 			$$\frac{\partial }{\partial t}\left( \frac{E^2 + E^2/v_x^2}{2} \right) +\frac{\partial}{\partial x} \left( \frac{E^2}{v_x} \right) =  -\varepsilon_\gamma \mu \overline{G_{rad}}n_\gamma$$
 			<img data-src="media/plane-wave-cascade/dicharge_like.png" width="80%">
-			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">A. S. Samsonov, I. Yu. Kostyukov, E. N. Nerush // Matter and Radiation at Extremes. –– 2021. –– Т. 6, № 3. –– С. 034401.</p>
+			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov, <em>Matter and Radiation at Extremes</em> <strong>6</strong> 034401 (2021).</p>
 		</div>
 		<div>
 			$$\frac{\partial n}{\partial t}=\frac{\partial^2 n}{\partial x^2}-\alpha n^2 + \mu\left( {E}^\beta - 1 \right) n$$
 			$$\frac{\partial E^2}{\partial t}+\frac{\partial E^2}{\partial x}=-2\varepsilon E^2$$
 			$$\varepsilon = 1 - n - i\delta n$$
 			<img data-src="media/plane-wave-cascade/gas-discharge.jpg" width="70%">
-			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">В. Е. Семёнов // Физика плазмы. –– 1982. –– Т. 8, № 3. –– С. 613––618</p>
+			<p style="text-align:left; font-size:1.2rem; padding: 1rem 2rem">V. E. Semenov, <em>Soviet Journal of Plasma Physics</em> <strong>8</strong>, 347--350 (1982).</p>
 			</div>
 		</div>
 	</div>
@@ -123,7 +123,7 @@
 
 
 <section data-visibility="uncounted">
-	<h3>КЭД каскад в плоской волне. Модель </h3>
+	<h3>QED cascade in a plane wave. QED-PIC simulations </h3>
 	<video controls data-src="media/plane-wave-cascade/PIC.webm" style="height:38rem"></video>
-	<p style="text-align:left; font-size:1.2rem; padding: 0 2rem">A. Samsonov, I. Yu. Kostyukov, E. Nerush // Matter and Radiation at Extremes. –– 2021. –– Т. 6, № 3. –– С. 034401.</p>
+	<p style="text-align:left; font-size:1.2rem; padding: 0 2rem">A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov, <em>Matter and Radiation at Extremes</em> <strong>6</strong> 034401 (2021).</p>
 </section>

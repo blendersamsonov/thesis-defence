@@ -1,81 +1,85 @@
 <section data-visibility="uncounted">
-    <h3>Реакция излучения. Временные масштабы</h3>
+    <h3>Radiation reaction. Timescales</h3>
     <div style="font-size:1.5rem">
         <p>$$a_0 = \frac{eE}{mc\omega}\gg 1$$</p>
-        <p>Длина формирования излучения$$\lambda_f = \lambda / a_0 \ll \lambda$$</p>
-        <p>Вероятность излучения в приближении локально-постоянного поля (LCFA)$$W_\mathrm{rad} \approx \alpha \frac{m c^2}{\gamma\hbar} \times
+        <p>Radiation formation length$$\lambda_f = \lambda / a_0 \ll \lambda$$</p>
+        <p>Radiation probability in locally-constant field approximation (LCFA)$$W_\mathrm{rad} \approx \alpha \frac{m c^2}{\gamma\hbar} \times
             \begin{cases}
                 1.4 \chi, & \chi \ll 1, \\
                 0.7 \chi^{2/3}, & \chi \gg 1,
             \end{cases}$$</p>
-        <p>"Длина свободного пробега"$$\lambda_W = c/W_\mathrm{rad} \approx \frac{\lambda}{\alpha a_0} \times
+        <p>Free mean path (distance between consecutive emissions)$$\lambda_W = c/W_\mathrm{rad} \approx \frac{\lambda}{\alpha a_0} \times
             \begin{cases}
                 1, & \chi \ll 1, \\
                 \chi^{1/3}, & \chi \gg 1.
             \end{cases}$$</p>
-        <p>Иерархия масштабов ($\chi \lesssim 10$)</p>
+        <p>Timescales hierarchy ($\chi \lesssim 10$)</p>
         <p style="border: 2px solid black; margin: 0 34rem 0 34rem; border-radius: 1.5rem;">$$\lambda_f \ll \lambda_W \ll \lambda$$</p>
     </div>
 </section>
 
 <section data-visibility="uncounted">
-    <h3>Динамика заряженных частиц в режиме экстремальных радиационных потерь</h3>
+    <h3>Particle dynamics in the strongly radiation dominated regime</h3>
         <div style="height: 36rem">
             <div>
-                Уравнения движения ультрарелятивистской заряженной частицы (электрона) в ЭМ поле с учётом реакции излучения
+                Ultrarelativistic charged particle (electron) motion equations with account of radiation reaction
             </div>
             
             $$\frac{\mathrm{d}\mathbf{v}}{\mathrm{d}t} = -\frac{\mathbf{E}+\mathbf{v} \times \mathbf{B} - \mathbf{v} (\mathbf{v} \mathbf{E})}{\gamma} \qquad\qquad \frac{\mathrm{d}\gamma}{\mathrm{d}t} = \mathbf{vE} - \mathbf{F}_\mathrm{rr}\left( |\mathbf{F}_\perp| \right)$$
     
             <div style="text-align: justify; padding: 0 5rem 0 5rem">
-                <p>В постоянных полях задача решается аналитически$^1$:</p>
+                <p>In constant EM fields the equations are solved analytically$^1$:</p>
                 <ul>
-                    <li>В системе отсчёта $\mathcal{K}'$, в которой $\mathbf{E}'\parallel\mathbf{B}'\parallel \mathbf{z}_0'$, электрон вращается в плоскости $x'y'$, и его скорость вдоль оси $z'$ приближается к 1 за время порядка $\gamma_0' mc/eE'$.</li>
-                    <li style="padding-top:0.5rem">В "лабораторной" системе отсчёта направление $\mathbf{v}_0$ электрического поля в $\mathcal{K}'$ определяется из уравнения
+                    <li>In the reference frame $\mathcal{K}'$, in which $\mathbf{E}'\parallel\mathbf{B}'\parallel \mathbf{z}_0'$, electron rotates in the $x'y'$ plane, and its velocity along the $z'$ axis approaches 1 on a timescale $\gamma_0' mc/eE'$.</li>
+                    <li style="padding-top:0.5rem">In the laboratory reference frame the direction $\mathbf{v}_0$ of the electric field in $\mathcal{K}'$ can be found from the equation
                     $$\mathbf{E}+\mathbf{v}_0 \times \mathbf{B} - \mathbf{v}_0 (\mathbf{v}_0 \mathbf{E})=0$$</li>
                 </ul>
-                <div>Считая, что в режиме экстремальных радиационных потерь $\gamma \ll eE/mc\omega\equiv a_0$, на временах масштаба $\gamma mc/eE\ll \omega^{-1}$ ЭМ поле можно считать постоянным. Таким образом, электрон "успевает" сориентироваться по направлению $\mathbf{v}_0$ до того, как оно существенно изменится.</div>
+                <div>
+                    In the radiation dominated regime, defined with the relation $\gamma \ll eE/mc\omega\equiv a_0$, on a timescale $\gamma mc/eE\ll \omega^{-1}$ EM field can be considered constant.
+                    Thus, electron orients along the direction $\mathbf{v}_0$ defined by local fields, faster than EM fields and thus direction $\mathbf{v}_0$ change.
+                </div>
             </div>
         </div>
         <div class="ref-bottom">
-            $^1$H. Heintzmann, E. Schrüfer // Physics Letters A. –– 1973. –– Т. 43, № 3. –– С. 287––288.
+            $^1$H. Heintzmann, E. Schrüfer, <em>Physics Letters A</em> <strong>43</strong>, 287––288 (1973).
         </div>
 </section>
 
 <section data-visibility="uncounted">
-    <h3>Общие свойства асимптотических траекторий</h3>
-    <div style="display: grid; grid-template-columns: 1fr 2fr; padding: 0 2rem 0 2rem; grid-auto-rows: 26rem;">
+    <h3>General properties of asymptotic trajectories</h3>
+    <div style="display: grid; grid-template-columns: 1fr 2fr; padding: 0 2rem 0 2rem; grid-auto-rows: 28rem;">
         <div>
+            If
             $$\mathbf{E} = \mathbf{f}(\mathbf{r}, t) - \mathbf{f}(\mathbf{r}, -t) $$
             $$\mathbf{B} = \mathbf{g}(\mathbf{r}, t) + \mathbf{g}(\mathbf{r}, -t) $$
             $$\mathbf{E}(t+T) = \mathbf{E}(t)$$
             $$\mathbf{B}(t+T) = \mathbf{B}(t)$$
-            В таком случае
+            Then
             $$\langle\mathbf{v}_0\rangle_T = 0$$
-            $$\mathbf{r}(t+T) = \mathbf{r}(t+T)$$
+            $$\mathbf{r}(t+T) = \mathbf{r}(t)$$
         </div>
         <div>
             <img class="stretch" data-src="media/asym-onion.png" width="90%">
         </div>
     </div>
     <div style="font-size: 1.4rem; height:12rem">
-        Пример: стоячая линейно-поляризованная волна
+        Example: standing linearly-polarized monochromatic plane wave
         $$\mathbf{E}=\mathbf{y}_0a_0\cos(t)\cos(x)$$
         $$\mathbf{B}=\mathbf{z}_0a_0\sin(t)\sin(x)$$
     </div>
     <div class="ref-bottom">
-        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Physical Review A. –– 2018. –– Т. 98, № 5. –– С. 053858.<br>
-        A. Gonoskov [и др.] // Physical Review Letters. –– 2014. –– Т. 113. –– С. 014801.
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov, <em>Physical Review A</em> <strong>98</strong>, 053858 (2018).<br>
+        A. Gonoskov, et al. <em>Physical Review Letters</em> <strong>113</strong>, 014801 (2014).
     </div>
 
 </section>
 
 <section data-visibility="uncounted">
-    <h3>Общие свойства асимптотических траекторий</h3>
+    <h3>General properties of asymptotic trajectories</h3>
     <div style="height: 38rem;">
         <img class="stretch" data-src="media/te11-new.png" width="65%">
         <div style="font-size: 1.3rem">
-            Пример: ТЕ11 мода прямоугольного волновода (модель лазерного пучка конечного размера). В системе отсчёта $\mathcal{K}'$, движущейся с групповой скоростью $v_g$:
+            Example: ТЕ11 mode of a rectangular waveguide (model of laser beam of finite diameter). In the reference frame $\mathcal{K}'$, moving along the $x$ axis with the group velocty $v_g$:
             \[
             \begin{align}
                 E_y' = a_0 k_\perp \cos(k_y y) \sin(k_z z) \cos(k_\perp t'), \\
@@ -87,13 +91,13 @@
         </div>
     </div>
     <div class="ref-bottom">
-        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Physical Review A. –– 2018. –– Т. 98, № 5. –– С. 053858.
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov, <em>Physical Review A</em> <strong>98</strong>, 053858 (2018).
     </div>
 
 </section>
 
 <section data-visibility="uncounted">
-    <h3>Динамика электрона в модельном линейном ускорителе</h3>
+    <h3>Electron dynamics in a model linear accelerator</h3>
     <div style="display: grid; grid-template-columns: 1fr 2fr; padding: 0 2rem 0 2rem; grid-auto-rows: 22rem;">
         <div style="padding-top:8rem">
             $$\mathbf{E} = \mathbf{z}_0 E_\mathrm{acc} + \mathbf{y} E_\mathrm{foc}$$
@@ -112,9 +116,9 @@
         \]
     </div>
     <div class="ref-bottom">
-        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov // Matter and Radiation at Extremes. –– 2022. –– Т. 8, № 1. –– С. 014402.<br>
-        I. Yu. Kostyukov, E. N. Nerush, A. G. Litvak // Physical Review Special Topics-Accelerators and Beams. –– 2012. –– Т. 15, № 11. –– С. 111001.<br>
-        A. A. Golovanov, E. N. Nerush, I. Yu. Kostyukov // New Journal of Physics. –– 2022. –– Т. 24, № 3. –– С. 033011.
+        A. S. Samsonov, E. N. Nerush, I. Yu. Kostyukov, <em>Matter and Radiation at Extremes</em> <strong>8</strong>, 014402 (2022).<br>
+        I. Yu. Kostyukov, E. N. Nerush, A. G. Litvak, <em>Physical Review Special Topics-Accelerators and Beams</em> <strong>15</strong>, 111001 (2012).<br>
+        A. A. Golovanov, E. N. Nerush, I. Yu. Kostyukov, <em>New Journal of Physics</em> <strong>24</strong>, 033011 (2022).
     </div>
 
 </section>
